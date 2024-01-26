@@ -1,23 +1,25 @@
 import { classNames } from 'shared/lib/classnames';
-import classes from './Sidebar.module.scss';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
-interface ISidebarProps {
-    className?: string;
-}
-export const Sidebar = ({ className }: ISidebarProps) => {
+import classes from './Sidebar.module.scss';
+
+type SidebarProps = {
+  className?: string;
+};
+export function Sidebar({ className }: SidebarProps) {
     const [collapsed, setCollapsed] = useState(false);
 
     const onToggle = () => {
-        setCollapsed(prev => !prev);
+        setCollapsed((prev) => !prev);
     };
+
     return (
         <div
             className={classNames(
-                classes.sidebar,
-                { [classes.collapsed]: collapsed },
-                [className]
+			  classes.sidebar,
+			  { [classes.collapsed]: collapsed },
+			  [className],
             )}
         >
             <button onClick={onToggle}>toggle</button>
@@ -27,4 +29,4 @@ export const Sidebar = ({ className }: ISidebarProps) => {
             </div>
         </div>
     );
-};
+}

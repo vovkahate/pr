@@ -1,25 +1,25 @@
 import { classNames } from 'shared/lib/classnames';
-import classes from './Navbar.module.scss';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import classes from './Navbar.module.scss';
 
-interface INavbarProps {
-    className?: string;
-}
-export const Navbar = ({ className }: INavbarProps) => {
+type INavbarProps = {
+  className?: string;
+};
+export function Navbar({ className }: INavbarProps) {
     return (
         <div className={classNames(classes.navbar, {}, [className])}>
             <div className={classes.links}>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     className={classes.mainLink}
-                    to={'/'}
+                    to="/"
                 >
                     Главная
                 </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
                     О сайте
                 </AppLink>
             </div>
         </div>
     );
-};
+}

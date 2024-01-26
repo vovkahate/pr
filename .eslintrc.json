@@ -1,0 +1,53 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": [
+            "off"
+        ],
+        "react/jsx-uses-react": [
+            "off"
+        ],
+        "react/jsx-props-no-spreading": [
+            "warn"
+        ],
+        "react/no-unescaped-entities": [
+            "off"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "eslint-plugin-import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off",
+        "no-unused-vars": "warn",
+        "react/require-default-props": "off"
+    }
+}

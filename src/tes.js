@@ -2,7 +2,7 @@
 // Результат преобразования { a: { b: { c: {} } } }
 
 const string = 'a.b.c';
-const func = str => {
+const func = (str) => {
     const arr = str.split('.');
     let res = {};
 
