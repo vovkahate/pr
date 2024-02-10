@@ -15,6 +15,8 @@ export function Navbar({ className }: INavbarProps) {
                     to="/"
                 >
                     Главная
+            
+                    
                 </AppLink>
                 <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
                     О сайте
