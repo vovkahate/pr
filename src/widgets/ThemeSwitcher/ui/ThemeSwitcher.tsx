@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classnames';
+import { classNames } from 'shared/lib/classnames/classnames';
 import { useTheme, Theme } from 'app/providers/ThemeProvider';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';

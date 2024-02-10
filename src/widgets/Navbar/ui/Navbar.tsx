@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classnames';
+import { classNames } from 'shared/lib/classnames/classnames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import classes from './Navbar.module.scss';
 
